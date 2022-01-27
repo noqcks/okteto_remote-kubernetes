@@ -265,7 +265,7 @@ export async function deploy(namespace: string) {
   });
 
   isActive.set(name, true);
-  term.sendText(`${getBinary()} pipeline deploy --wait`, true);
+  term.sendText(`"${getBinary()}" pipeline deploy --wait`, true);
   term.show(true);
   console.log('okteto deploy completed');
 }
@@ -285,7 +285,7 @@ export async function destroy(namespace: string) {
   });
 
   isActive.set(name, true);
-  term.sendText(`${getBinary()} pipeline destroy --wait`, true);
+  term.sendText(`"${getBinary()}" pipeline destroy --wait`, true);
   term.show(true);
   console.log('okteto destroy completed');
 }
@@ -305,7 +305,7 @@ export async function setContext(context: string) : Promise<boolean>{
   });
 
   isActive.set(name, true);
-  let cmd = `${getBinary()} context use ${context}`;
+  let cmd = `"${getBinary()}" context use ${context}`;
   term.sendText(cmd, true);
   
   return new Promise<boolean>(function(resolve, reject) {
@@ -339,7 +339,7 @@ export async function setNamespace(namespace: string) {
   });
 
   isActive.set(name, true);
-  let cmd = `${getBinary()} namespace use ${namespace}`;
+  let cmd = `"${getBinary()}" namespace use ${namespace}`;
   term.sendText(cmd, true);
   term.show(true);
 
