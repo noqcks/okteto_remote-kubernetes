@@ -61,7 +61,7 @@ export async function binary(source: string, destination: string, progress: vsco
       current = percentage;
       progress.report({increment: reportedProgress, message: ''});
     })
-    .on("error", (error) => {
+    .on("error", (error: Error) => {
       console.error(`Download failed: ${error.message}`);
     });
   
