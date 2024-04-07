@@ -55,7 +55,7 @@ export async function binary(source: string, destination: string, progress: vsco
   const fileWriterStream = fs.createWriteStream(destination);
   var current = 0;
   downloadStream
-    .on("downloadProgress", ({transferred, total, percent})=> {
+    .on("downloadProgress", ({transferred, total, percent}: Progress)=> {
       const percentage = Math.round(percent * 100);
       const reportedProgress = percentage - current;
       current = percentage;

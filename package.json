@@ -165,7 +165,7 @@
     "execa": "^5.1.1",
     "find-process": "^1.4.4",
     "get-port": "^5.1.1",
-    "got": "^12.5.2",
+    "got": "^14.2.1",
     "mixpanel": "^0.17.0",
     "node-machine-id": "^1.1.12",
     "semver": "^7.5.4",
