@@ -1,6 +1,6 @@
 'use strict';
 
-import {commandSync} from 'execa';
+import execa from 'execa';
 import {createHmac} from 'crypto';
 import * as os from 'os';
 
