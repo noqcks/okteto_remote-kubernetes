@@ -143,7 +143,7 @@ export async function install(progress: vscode.Progress<{increment: number, mess
 
   if (source.chmod) {
     try {
-      await exec('chmod', ['a+x', installPath]);
+      await execa('chmod', ['a+x', installPath]);
     } catch(err: any) {
       throw new Error(`failed to chmod ${installPath}: ${getErrorMessage(err)}`);
     }
