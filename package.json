@@ -162,7 +162,7 @@
     "change-case": "^4.1.2",
     "command-exists": "^1.2.9",
     "eslint": "^8.52.0",
-    "execa": "^5.1.1",
+    "execa": "^8.0.1",
     "find-process": "^1.4.4",
     "get-port": "^5.1.1",
     "got": "^12.5.2",

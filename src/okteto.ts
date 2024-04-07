@@ -2,7 +2,7 @@
 
 import * as fs from 'fs';
 import {promises} from 'fs';
-import execa from 'execa';
+import {exec} from 'execa';
 import * as path from 'path';
 import commandExists from 'command-exists';
 import {protect} from './machineid';
@@ -85,7 +85,7 @@ async function isInstalled(binaryPath: string): Promise<boolean> {
 }
 
 async function getVersion(binary: string): Promise<string | undefined> {
-  const r = await execa(binary, ['version']);
+  const r = await exec(binary, ['version']);
   if (r.failed) {
     console.error(`okteto version failed: ${r.stdout} ${r.stderr}`);
     return undefined;
