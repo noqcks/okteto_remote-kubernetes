@@ -2,7 +2,7 @@
 
 import * as fs from 'fs';
 import * as os from 'os';
-import got from'got';
+import got from 'got';
 import { pipeline } from 'stream';
 import path from 'path';
 import * as vscode from 'vscode';
