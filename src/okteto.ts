@@ -587,8 +587,7 @@ export async function getContextList(): Promise<RuntimeItem[]>{
   const items = new Array<RuntimeItem>();
 
   try {
-    const r = await execa(getBinary(), ["context", "list", "--output", "json"])
-    const lines = JSON.parse(r.stdout);
+    const r = await execa(getBinary(), ["context", "list", "--output", "json"]);    const lines = JSON.parse(r.stdout);
     for(var i = 0; i < lines.length; i++) {
       items.push(new RuntimeItem(lines[i].name, "", lines[i].name));
     }
